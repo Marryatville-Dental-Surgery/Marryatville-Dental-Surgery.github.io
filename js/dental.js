@@ -20,12 +20,13 @@ $(document).ready(function() {
     }
     
     var surgeryNames = firstStr + " &amp; " + secondStr + " Dental Surgery";
+    var surgeryNamesRaw = surgeryNames.replace("&amp;", "&");
     var surgeryShortNames = firstStr + " &amp; " + secondStr;
     var dentistNames = firstName + " <span class=\"italic\">BDS (Adel)</span> &amp; " + secondName + " <span class=\"italic\">BDS (Adel)</span>";
     var dentistShortNames = firstName + " &amp; " + secondName;
     
-    $(document).attr("title", surgeryNames);
-    $("meta[name='description']").attr("content", surgeryNames);
+    $(document).attr("title", surgeryNamesRaw);
+    $("meta[name='description']").attr("content", surgeryNamesRaw);
     $("#header").html(surgeryNames);
     $("#headernames").html(dentistNames);
     $("#surgeryshortname").html(surgeryShortNames);
